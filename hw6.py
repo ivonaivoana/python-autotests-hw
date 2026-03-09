@@ -58,11 +58,17 @@ def arr_to_string():
 
 
 def list_formatting():
-    """Formats the 3rd symbol of the user's input, and deletes the user's symbol of index [6]"""
-    users_list = input('Enter 10 characters separated by spaces: ').strip().split()
+    """
+    Formats the 3rd symbol of the user's input,
+    and deletes the user's symbol of index [6]
+    """
+    users_list = input(
+        'Enter 10 characters separated by spaces: '
+    ).strip().split()
     users_list[2] = input('Enter new value for the 3rd character: ').strip()
     del users_list[6]
     print(users_list)
+
 
 replace()
 ing()
