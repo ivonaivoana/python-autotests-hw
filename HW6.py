@@ -1,12 +1,12 @@
 def replace():
     url = 'www.my_site.com#about'
     print(url.replace("#", "/"))
-#replace()
+replace()
 
 def ing():
     word = input("Enter your word: ")
     print(word + 'ing')
-#ing()
+ing()
 
 def name_switch():
     name = 'Ivanou Ivan'
