@@ -8,9 +8,9 @@ input_time = input("Enter time in 24h format hh:mm ").split(":")
 hours = int(input_time[0])
 minutes = int(input_time[1])
 if minutes < 10:
-    display_minutes = "0" + str(minutes) # pylint: disable=invalid-name
+    display_minutes = "0" + str(minutes)  # pylint: disable=invalid-name
 elif minutes in range(11, 60):
-    display_minutes = str(minutes) # pylint: disable=invalid-name
+    display_minutes = str(minutes)  # pylint: disable=invalid-name
 else:
     print('Invalid input')
     sys.exit()
