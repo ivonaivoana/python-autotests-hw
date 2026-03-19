@@ -9,17 +9,17 @@
 
 import random
 
-generated_number = str(random.randint(1000, 9999))
+generated_number = str(random.randint(1000, 9999))  # pylint: disable=invalid-name
 while len(set(generated_number)) != 4:
-    generated_number = str(random.randint(1000, 9999))
+    generated_number = str(random.randint(1000, 9999))  # pylint: disable=invalid-name
 
 print("Компьютер загадал 4-значное число из уникальных цифр.")
 
 while True:
     users_try = input('Твой вариант: ')
 
-    bulls = 0
-    cows = 0
+    bulls = 0  # pylint: disable=invalid-name
+    cows = 0  # pylint: disable=invalid-name
 
     for i in range(4):
         if users_try[i] == generated_number[i]:
