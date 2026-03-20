@@ -10,6 +10,7 @@
 
 import random
 
+
 def number_generation():
     """Генерирует 4-значное число с уникальными числами"""
 
@@ -19,13 +20,18 @@ def number_generation():
         generator_list[0] = generator_list[4]
     return "".join(map(str, generator_list[:4]))
 
-generated_number = number_generation()
+
+generated_number = number_generation()  # pylint: disable=invalid-name
 print("Компьютер загадал 4-значное число из уникальных цифр.")
 
 while True:
     users_try = input('Твой вариант: ')
-    if not users_try.isdigit() or len(set(users_try)) != 4 or len(users_try) != 4:
-        print('Ошибка. Введите 4-значное число с уникальными цифрами..')
+    if (
+            not users_try.isdigit()
+            or len(set(users_try)) != 4
+            or len(users_try) != 4
+    ):
+        print('Ошибка. Введите 4-значное число с уникальными цифрами.')
         continue
     bulls = 0  # pylint: disable=invalid-name
     cows = 0  # pylint: disable=invalid-name
