@@ -4,7 +4,7 @@ to verify it returns correct boolean results.
 """
 
 
-def solution(users_arr: list):
+def solution(users_arr: list) -> bool:
     """
     Check if the given list of integers can become strictly increasing
     by removing at most one element.
