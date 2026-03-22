@@ -10,7 +10,7 @@ def solution(n, first_number):
         on a circle of size `n`.
         """
 
-    clocks = list(range(0, n))
+    clocks = list(range(n))
     first_half = clocks[:n//2]
     second_half = clocks[n//2:]
     combined = list(zip(first_half, second_half))
