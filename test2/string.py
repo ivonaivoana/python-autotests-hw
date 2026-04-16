@@ -1,8 +1,12 @@
-given_string = "qwertyuiopasdfghjkl"
-print(given_string[0])
-print(given_string[-1])
-print(given_string[2])
-print(given_string[-3])
-print(len(given_string))
-print(given_string[::-1])
-print(given_string[0:8])
+""""
+String manipulations
+"""
+
+GIVEN_STRING = "qwertyuiopasdfghjkl"
+print(GIVEN_STRING[0])
+print(GIVEN_STRING[-1])
+print(GIVEN_STRING[2])
+print(GIVEN_STRING[-3])
+print(len(GIVEN_STRING))
+print(GIVEN_STRING[::-1])
+print(GIVEN_STRING[0:8])
