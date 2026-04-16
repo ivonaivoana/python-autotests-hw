@@ -9,9 +9,8 @@ def file_info(filename):
     """Counts lines, words, and letters in a file
     and appends the results to it."""
 
-    file = open(filename, "r", encoding="utf-8")
-    text = file.read()
-    file.close()
+    with open(filename, "r", encoding="utf-8") as file:
+        text = file.read()
 
     lines = text.split("\n")
     line_count = len(lines)
@@ -28,12 +27,11 @@ def file_info(filename):
     print("Number of words:", word_count)
     print("Number of letters:", letter_count)
 
-    file = open(filename, "a", encoding="utf-8")
-    file.write("\n\n--- File statistics ---\n")
-    file.write("Lines: " + str(line_count) + "\n")
-    file.write("Words: " + str(word_count) + "\n")
-    file.write("Letters: " + str(letter_count) + "\n")
-    file.close()
+    with open(filename, "a", encoding="utf-8") as file:
+        file.write("\n\n--- File statistics ---\n")
+        file.write("Lines: " + str(line_count) + "\n")
+        file.write("Words: " + str(word_count) + "\n")
+        file.write("Letters: " + str(letter_count) + "\n")
 
 
 file_info("test.txt")
